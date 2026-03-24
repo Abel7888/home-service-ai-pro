@@ -1,23 +1,23 @@
-import { Check, MessageSquare } from "lucide-react";
+import { Check, MessageSquare, Sparkles } from "lucide-react";
 
 const plans = [
   {
     name: "Starter",
-    price: "$297",
-    setup: "$497 setup",
+    price: "$127",
+    setup: "$197 setup",
     featured: false,
     features: [
       "Agent 1: Never Miss a Job",
       "Agent 2: Lost Jobs Recovery",
       "Email support, 48hr response",
-      "Setup in 48 hours",
+      "Live within 48 hours",
     ],
-    note: "Most businesses see a return within the first week — we're proud of that.",
+    note: "Most businesses see a return within the first week.",
   },
   {
     name: "Growth",
-    price: "$497",
-    setup: "$797 setup",
+    price: "$167",
+    setup: "$297 setup",
     featured: true,
     features: [
       "Everything in Starter",
@@ -25,12 +25,12 @@ const plans = [
       "Monthly performance report",
       "Priority support",
     ],
-    note: null,
+    note: "Our most popular plan.",
   },
   {
     name: "Full System",
-    price: "$797",
-    setup: "$1,497 setup",
+    price: "$247",
+    setup: "$397 setup",
     featured: false,
     features: [
       "Agents 1, 2 & 3 included",
@@ -44,24 +44,44 @@ const plans = [
   },
 ];
 
+const addOns = [
+  {
+    name: "Agent 4: Social Media Autopilot",
+    description:
+      "Turns your finished jobs into social media content — AI-written posts with before/after captions, scheduled across Facebook, Instagram & Google Business automatically.",
+    highlights: [
+      "AI-written posts from completed jobs",
+      "Auto-scheduled at peak engagement times",
+      "Monthly tip & seasonal promo posts included",
+    ],
+  },
+  {
+    name: "Agent 5: Smart Reputation Manager",
+    description:
+      "After every job, happy customers get a review request. 5-star reviews trigger a referral ask. Unhappy customers are caught privately before they hit Google.",
+    highlights: [
+      "Automated review requests after every job",
+      "AI-drafted review responses",
+      "Monthly reputation report",
+    ],
+  },
+];
+
 const PricingSection = () => (
   <section id="pricing" className="section-light section-padding">
     <div className="max-w-5xl mx-auto text-center">
       <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
         Honest pricing. Real results.
       </h2>
-      <p className="text-muted-foreground mb-4 max-w-2xl mx-auto">
-        We keep things straightforward — no hidden fees, no long-term contracts. Pick what fits your business today, and adjust anytime. The setup fee covers everything so you don't have to lift a finger.
+      <p className="text-muted-foreground mb-3 max-w-2xl mx-auto">
+        No hidden fees, no long-term contracts. Pick what fits your business today and adjust anytime. We handle all the setup — you don't lift a finger.
       </p>
-      <p className="text-muted-foreground mb-14 text-sm">
-        Need Agents 4 or 5 on their own?{" "}
-        <a href="/contact" className="underline text-foreground font-medium hover:opacity-80 transition-opacity">
-          Reach out for custom pricing
-        </a>{" "}
-        — we're happy to chat.
+      <p className="text-sm text-muted-foreground mb-14">
+        Live within 48 hours of completing onboarding. Cancel anytime.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Plan cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {plans.map((plan) => (
           <div
             key={plan.name}
@@ -109,14 +129,46 @@ const PricingSection = () => (
         ))}
       </div>
 
-      <div className="mt-10 p-6 rounded-xl bg-muted border border-border flex flex-col sm:flex-row items-center gap-4 justify-center">
+      {/* Agent 4 & 5 add-on boxes */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        {addOns.map((addon) => (
+          <div
+            key={addon.name}
+            className="rounded-xl border border-dashed border-border p-6 md:p-8 text-left hover:border-foreground/20 transition-all duration-200 bg-muted/50"
+          >
+            <div className="flex items-center gap-2 mb-3">
+              <Sparkles className="w-4 h-4 text-muted-foreground" />
+              <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Add-on</span>
+            </div>
+            <h3 className="text-lg font-bold mb-2">{addon.name}</h3>
+            <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{addon.description}</p>
+            <ul className="space-y-2 mb-6">
+              {addon.highlights.map((h) => (
+                <li key={h} className="flex items-start gap-2 text-sm text-foreground/80">
+                  <Check className="w-4 h-4 mt-0.5 shrink-0 text-muted-foreground" />
+                  {h}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="/contact"
+              className="inline-block border border-border text-foreground font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-muted transition-colors"
+            >
+              Request pricing →
+            </a>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom note */}
+      <div className="p-5 rounded-xl bg-muted border border-border flex flex-col sm:flex-row items-center gap-3 justify-center">
         <MessageSquare className="w-5 h-5 text-muted-foreground shrink-0" />
         <p className="text-sm text-muted-foreground text-center sm:text-left">
-          <strong className="text-foreground">Looking for just Agents 4 &amp; 5?</strong>{" "}
-          Social Media Autopilot and Reputation Manager are available as add-ons or standalone packages.{" "}
+          <strong className="text-foreground">Not sure which plan is right?</strong>{" "}
           <a href="/contact" className="underline text-foreground font-medium hover:opacity-80 transition-opacity">
-            Request custom pricing →
-          </a>
+            Let's chat
+          </a>{" "}
+          — we'll help you figure out what makes sense for your business. No pressure.
         </p>
       </div>
     </div>
