@@ -11,7 +11,7 @@ const CtaSection = () => (
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
         <a
-          href="#"
+          href="/contact"
           className="bg-primary-foreground text-primary font-semibold px-8 py-4 rounded-lg text-base hover:opacity-90 transition-opacity"
         >
           Book a free demo
