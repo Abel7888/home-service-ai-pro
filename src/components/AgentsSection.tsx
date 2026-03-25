@@ -78,9 +78,9 @@ const agents = [
     roiCallout:
       "Most trades businesses have dead social pages. This fills them with real job content — zero effort from the owner.",
     apis: ["OpenAI GPT-4o", "Buffer API", "Facebook/Instagram Graph API", "Google Business Profile API", "Zapier"],
-    accentBg: "hsl(244, 60%, 96%)",
-    accentText: "hsl(248, 42%, 37%)",
-    accentBorder: "hsl(248, 42%, 47%)",
+    accentBg: "hsl(270, 80%, 96%)",
+    accentText: "hsl(263, 70%, 50%)",
+    accentBorder: "hsl(263, 70%, 58%)",
     featured: false,
   },
   {
