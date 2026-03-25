@@ -102,9 +102,9 @@ const agents = [
     roiCallout:
       "Going from 12 reviews to 80+ reviews increases inbound calls by 3–4× — without spending a dollar on ads.",
     apis: ["Google My Business API", "Twilio SMS", "OpenAI", "Yotpo", "Birdeye", "Make.com"],
-    accentBg: "hsl(160, 45%, 93%)",
-    accentText: "hsl(168, 82%, 17%)",
-    accentBorder: "hsl(168, 82%, 27%)",
+    accentBg: "hsl(175, 60%, 93%)",
+    accentText: "hsl(180, 70%, 28%)",
+    accentBorder: "hsl(180, 70%, 40%)",
     featured: false,
   },
 ];
