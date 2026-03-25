@@ -16,9 +16,9 @@ const agents = [
     roiCallout:
       "If you miss even 3 calls a week at $300/job — that's $46,800/year walking out the door.",
     apis: ["Twilio", "OpenAI Realtime", "Google Calendar", "SendGrid"],
-    accentBg: "hsl(214, 60%, 95%)",
-    accentText: "hsl(214, 78%, 27%)",
-    accentBorder: "hsl(214, 78%, 37%)",
+    accentBg: "hsl(214, 100%, 95%)",
+    accentText: "hsl(217, 91%, 45%)",
+    accentBorder: "hsl(217, 91%, 55%)",
     featured: true,
   },
   {
