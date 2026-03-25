@@ -35,9 +35,9 @@ const agents = [
     roiCallout:
       "Clients recover an average of 2–3 jobs per week from this alone. That's found money.",
     apis: ["Twilio SMS", "OpenAI GPT-4o", "Calendly", "Google Sheets"],
-    accentBg: "hsl(120, 30%, 93%)",
-    accentText: "hsl(120, 52%, 23%)",
-    accentBorder: "hsl(120, 52%, 33%)",
+    accentBg: "hsl(152, 70%, 93%)",
+    accentText: "hsl(160, 84%, 28%)",
+    accentBorder: "hsl(160, 84%, 39%)",
     featured: true,
   },
   {
