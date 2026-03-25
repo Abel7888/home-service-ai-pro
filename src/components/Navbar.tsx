@@ -93,13 +93,15 @@ const Navbar = () => {
               </Link>
             )
           )}
-          <Link
-            to="/contact"
+          <a
+            href="https://datashieldtech.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="block text-center bg-primary text-primary-foreground text-sm font-semibold px-4 py-2 rounded-lg"
           >
-            Book a Demo
-          </Link>
+            View Live Demo
+          </a>
         </div>
       )}
     </nav>
