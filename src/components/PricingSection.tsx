@@ -1,52 +1,69 @@
-import { Check, MessageSquare, Sparkles } from "lucide-react";
+import { Check, MessageSquare, Sparkles, ArrowUpRight } from "lucide-react";
 
-const plans = [
+const agents = [
   {
-    name: "Starter",
+    number: 1,
+    name: "Never miss a job",
+    tagline: "24/7 AI call answering",
     price: "$127",
-    setup: "$197 setup",
+    setup: "$197 one-time setup",
     featured: false,
     features: [
-      "Agent 1: Never Miss a Job",
-      "Agent 2: Lost Jobs Recovery",
-      "Email support, 48hr response",
-      "Live within 48 hours",
+      "Answers every call 24/7 — nights + weekends",
+      "Qualifies job type, address, timing",
+      "Books directly into your calendar",
+      "SMS confirmation to customer",
+      "Owner ping on every new booking",
+      "Email support — 48hr response",
     ],
-    note: "Most businesses see a return within the first week.",
+    roi: "1 recovered call/week at $300/job = $1,200/mo. This costs $127.",
+    supportLabel: "Email support",
+    supportDetail: "48hr response",
   },
   {
-    name: "Growth",
+    number: 2,
+    name: "Lost jobs recovery",
+    tagline: "Missed call → text back → book",
     price: "$167",
-    setup: "$297 setup",
+    setup: "$297 one-time setup",
     featured: true,
     features: [
-      "Everything in Starter",
-      "Agent 3: Lead Conversion",
-      "Monthly performance report",
-      "Priority support",
+      "Texts missed callers within 60 seconds",
+      "AI handles reply conversations",
+      "3-touch follow-up sequence (24hr, 48hr, 72hr)",
+      "Booking link sent automatically",
+      "Weekly recovery report to owner",
+      "Priority support — 24hr response",
     ],
-    note: "Our most popular plan.",
+    roi: "Clients recover 2–3 jobs/week on average. That's $800–$1,200 extra monthly.",
+    supportLabel: "Priority support",
+    supportDetail: "24hr response",
   },
   {
-    name: "Full System",
+    number: 3,
+    name: "Lead conversion",
+    tagline: "New lead → nurture → book",
     price: "$247",
-    setup: "$397 setup",
+    setup: "$397 one-time setup",
     featured: false,
     features: [
-      "Agents 1, 2 & 3 included",
-      "Agent 4: Social Media Autopilot",
-      "Agent 5: Smart Reputation Manager",
-      "Monthly strategy call (30 min)",
-      "Same-day support",
-      "White-glove onboarding",
+      "Instant SMS + email on every new lead",
+      "AI-personalized follow-up at 24hr, 72hr, 5 days",
+      "Works from any lead source (ads, forms, referrals)",
+      "HubSpot CRM — every lead logged automatically",
+      "No-show re-engagement fires automatically",
+      "Same-day support + monthly report",
     ],
-    note: null,
+    roi: "Conversion rate goes from 12% → 34% on average. Same leads, more booked jobs.",
+    supportLabel: "Same-day support",
+    supportDetail: "Monthly report",
   },
 ];
 
 const addOns = [
   {
-    name: "Agent 4: Social Media Autopilot",
+    number: 4,
+    name: "Social Media Autopilot",
     description:
       "Turns your finished jobs into social media content — AI-written posts with before/after captions, scheduled across Facebook, Instagram & Google Business automatically.",
     highlights: [
@@ -56,7 +73,8 @@ const addOns = [
     ],
   },
   {
-    name: "Agent 5: Smart Reputation Manager",
+    number: 5,
+    name: "Smart Reputation Manager",
     description:
       "After every job, happy customers get a review request. 5-star reviews trigger a referral ask. Unhappy customers are caught privately before they hit Google.",
     highlights: [
@@ -69,62 +87,101 @@ const addOns = [
 
 const PricingSection = () => (
   <section id="pricing" className="section-light section-padding">
-    <div className="max-w-5xl mx-auto text-center">
+    <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
-        Honest pricing. Real results.
+        Simple pricing.
+        <br />
+        <span className="text-muted-foreground">Serious ROI.</span>
       </h2>
       <p className="text-muted-foreground mb-3 max-w-2xl mx-auto">
-        No hidden fees, no long-term contracts. Pick what fits your business today and adjust anytime. We handle all the setup — you don't lift a finger.
+        One agent or all three. Month-to-month. Setup in 48 hours.
       </p>
       <p className="text-sm text-muted-foreground mb-14">
         Live within 48 hours of completing onboarding. Cancel anytime.
       </p>
 
-      {/* Plan cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        {plans.map((plan) => (
+      {/* Agent cards */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+        {agents.map((agent) => (
           <div
-            key={plan.name}
-            className={`rounded-xl p-8 text-left transition-all duration-200 ${
-              plan.featured
-                ? "bg-primary text-primary-foreground border-2 border-primary md:scale-105 shadow-2xl"
+            key={agent.number}
+            className={`rounded-xl text-left transition-all duration-200 overflow-hidden ${
+              agent.featured
+                ? "bg-primary text-primary-foreground border-2 border-primary lg:scale-105 shadow-2xl"
                 : "bg-background border border-border hover:border-foreground/20"
             }`}
           >
-            <h3 className="text-lg font-bold mb-1">{plan.name}</h3>
-            <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-4xl font-black">{plan.price}</span>
-              <span className={`text-sm ${plan.featured ? "opacity-70" : "text-muted-foreground"}`}>/mo</span>
-            </div>
-            <p className={`text-sm mb-6 ${plan.featured ? "opacity-60" : "text-muted-foreground"}`}>
-              + {plan.setup}
-            </p>
-
-            <ul className="space-y-3 mb-6">
-              {plan.features.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-sm">
-                  <Check className={`w-4 h-4 mt-0.5 shrink-0 ${plan.featured ? "opacity-80" : "text-muted-foreground"}`} />
-                  {f}
-                </li>
-              ))}
-            </ul>
-
-            {plan.note && (
-              <p className={`text-xs italic ${plan.featured ? "opacity-50" : "text-muted-foreground"}`}>
-                {plan.note}
-              </p>
+            {agent.featured && (
+              <div className="bg-primary-foreground/10 text-center py-1.5 text-xs font-semibold uppercase tracking-wider">
+                Most popular
+              </div>
             )}
 
-            <a
-              href="/contact"
-              className={`block text-center mt-6 py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90 ${
-                plan.featured
-                  ? "bg-primary-foreground text-primary"
-                  : "bg-primary text-primary-foreground"
-              }`}
-            >
-              Get started
-            </a>
+            <div className="p-8">
+              {/* Header */}
+              <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${agent.featured ? "opacity-60" : "text-muted-foreground"}`}>
+                Agent {agent.number}
+              </p>
+              <h3 className="text-xl font-bold mb-1">{agent.name}</h3>
+              <p className={`text-sm mb-5 ${agent.featured ? "opacity-60" : "text-muted-foreground"}`}>
+                {agent.tagline}
+              </p>
+
+              {/* Price */}
+              <div className="flex items-baseline gap-1 mb-1">
+                <span className="text-4xl font-black">{agent.price}</span>
+                <span className={`text-sm ${agent.featured ? "opacity-70" : "text-muted-foreground"}`}>/mo</span>
+              </div>
+              <p className={`text-sm mb-6 ${agent.featured ? "opacity-50" : "text-muted-foreground"}`}>
+                + {agent.setup}
+              </p>
+
+              {/* Divider */}
+              <div className={`border-t mb-6 ${agent.featured ? "border-primary-foreground/20" : "border-border"}`} />
+
+              {/* What's included */}
+              <p className={`text-xs font-semibold uppercase tracking-wider mb-4 ${agent.featured ? "opacity-60" : "text-muted-foreground"}`}>
+                What's included
+              </p>
+              <ul className="space-y-3 mb-6">
+                {agent.features.map((f) => (
+                  <li key={f} className="flex items-start gap-2.5 text-sm">
+                    <Check className={`w-4 h-4 mt-0.5 shrink-0 ${agent.featured ? "opacity-80" : "text-primary"}`} />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* ROI box */}
+              <div className={`rounded-lg p-4 mb-6 ${agent.featured ? "bg-primary-foreground/10" : "bg-muted"}`}>
+                <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${agent.featured ? "opacity-60" : "text-muted-foreground"}`}>
+                  ROI anchor
+                </p>
+                <p className="text-sm leading-relaxed">{agent.roi}</p>
+              </div>
+
+              {/* CTA */}
+              <a
+                href="/contact"
+                className={`flex items-center justify-center gap-2 w-full py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90 ${
+                  agent.featured
+                    ? "bg-primary-foreground text-primary"
+                    : "bg-primary text-primary-foreground"
+                }`}
+              >
+                Get Agent {agent.number} <ArrowUpRight className="w-4 h-4" />
+              </a>
+
+              {/* Support badge */}
+              <div className="flex items-center justify-center gap-2 mt-4">
+                <span className={`inline-block text-xs px-3 py-1 rounded-full ${agent.featured ? "bg-primary-foreground/10 opacity-70" : "bg-muted text-muted-foreground"}`}>
+                  {agent.supportLabel}
+                </span>
+                <span className={`text-xs ${agent.featured ? "opacity-50" : "text-muted-foreground"}`}>
+                  {agent.supportDetail}
+                </span>
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -133,12 +190,14 @@ const PricingSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
         {addOns.map((addon) => (
           <div
-            key={addon.name}
+            key={addon.number}
             className="rounded-xl border border-dashed border-border p-6 md:p-8 text-left hover:border-foreground/20 transition-all duration-200 bg-muted/50"
           >
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="w-4 h-4 text-muted-foreground" />
-              <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Add-on</span>
+              <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                Agent {addon.number} · Add-on
+              </span>
             </div>
             <h3 className="text-lg font-bold mb-2">{addon.name}</h3>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{addon.description}</p>
@@ -154,7 +213,7 @@ const PricingSection = () => (
               href="/contact"
               className="inline-block border border-border text-foreground font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-muted transition-colors"
             >
-              Request pricing →
+              Contact for pricing →
             </a>
           </div>
         ))}
@@ -164,7 +223,7 @@ const PricingSection = () => (
       <div className="p-5 rounded-xl bg-muted border border-border flex flex-col sm:flex-row items-center gap-3 justify-center">
         <MessageSquare className="w-5 h-5 text-muted-foreground shrink-0" />
         <p className="text-sm text-muted-foreground text-center sm:text-left">
-          <strong className="text-foreground">Not sure which plan is right?</strong>{" "}
+          <strong className="text-foreground">Not sure which agent is right?</strong>{" "}
           <a href="/contact" className="underline text-foreground font-medium hover:opacity-80 transition-opacity">
             Let's chat
           </a>{" "}
