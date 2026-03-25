@@ -16,9 +16,9 @@ const agents = [
     roiCallout:
       "If you miss even 3 calls a week at $300/job — that's $46,800/year walking out the door.",
     apis: ["Twilio", "OpenAI Realtime", "Google Calendar", "SendGrid"],
-    accentBg: "hsl(214, 60%, 95%)",
-    accentText: "hsl(214, 78%, 27%)",
-    accentBorder: "hsl(214, 78%, 37%)",
+    accentBg: "hsl(214, 100%, 95%)",
+    accentText: "hsl(217, 91%, 45%)",
+    accentBorder: "hsl(217, 91%, 55%)",
     featured: true,
   },
   {
@@ -35,9 +35,9 @@ const agents = [
     roiCallout:
       "Clients recover an average of 2–3 jobs per week from this alone. That's found money.",
     apis: ["Twilio SMS", "OpenAI GPT-4o", "Calendly", "Google Sheets"],
-    accentBg: "hsl(120, 30%, 93%)",
-    accentText: "hsl(120, 52%, 23%)",
-    accentBorder: "hsl(120, 52%, 33%)",
+    accentBg: "hsl(152, 70%, 93%)",
+    accentText: "hsl(160, 84%, 28%)",
+    accentBorder: "hsl(160, 84%, 39%)",
     featured: true,
   },
   {
@@ -54,9 +54,9 @@ const agents = [
     roiCallout:
       "Most businesses convert 10–20% of leads. This system pushes that to 30–40% with zero extra ad spend.",
     apis: ["Twilio", "SendGrid", "OpenAI", "HubSpot CRM", "Calendly", "Google Cal"],
-    accentBg: "hsl(40, 80%, 92%)",
-    accentText: "hsl(36, 100%, 24%)",
-    accentBorder: "hsl(36, 100%, 34%)",
+    accentBg: "hsl(45, 100%, 93%)",
+    accentText: "hsl(32, 95%, 38%)",
+    accentBorder: "hsl(32, 95%, 50%)",
     featured: true,
   },
   {
@@ -78,9 +78,9 @@ const agents = [
     roiCallout:
       "Most trades businesses have dead social pages. This fills them with real job content — zero effort from the owner.",
     apis: ["OpenAI GPT-4o", "Buffer API", "Facebook/Instagram Graph API", "Google Business Profile API", "Zapier"],
-    accentBg: "hsl(244, 60%, 96%)",
-    accentText: "hsl(248, 42%, 37%)",
-    accentBorder: "hsl(248, 42%, 47%)",
+    accentBg: "hsl(270, 80%, 96%)",
+    accentText: "hsl(263, 70%, 50%)",
+    accentBorder: "hsl(263, 70%, 58%)",
     featured: false,
   },
   {
@@ -102,9 +102,9 @@ const agents = [
     roiCallout:
       "Going from 12 reviews to 80+ reviews increases inbound calls by 3–4× — without spending a dollar on ads.",
     apis: ["Google My Business API", "Twilio SMS", "OpenAI", "Yotpo", "Birdeye", "Make.com"],
-    accentBg: "hsl(160, 45%, 93%)",
-    accentText: "hsl(168, 82%, 17%)",
-    accentBorder: "hsl(168, 82%, 27%)",
+    accentBg: "hsl(175, 60%, 93%)",
+    accentText: "hsl(180, 70%, 28%)",
+    accentBorder: "hsl(180, 70%, 40%)",
     featured: false,
   },
 ];
