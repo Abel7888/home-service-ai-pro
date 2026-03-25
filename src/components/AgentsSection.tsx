@@ -54,9 +54,9 @@ const agents = [
     roiCallout:
       "Most businesses convert 10–20% of leads. This system pushes that to 30–40% with zero extra ad spend.",
     apis: ["Twilio", "SendGrid", "OpenAI", "HubSpot CRM", "Calendly", "Google Cal"],
-    accentBg: "hsl(40, 80%, 92%)",
-    accentText: "hsl(36, 100%, 24%)",
-    accentBorder: "hsl(36, 100%, 34%)",
+    accentBg: "hsl(45, 100%, 93%)",
+    accentText: "hsl(32, 95%, 38%)",
+    accentBorder: "hsl(32, 95%, 50%)",
     featured: true,
   },
   {
