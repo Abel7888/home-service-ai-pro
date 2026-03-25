@@ -8,68 +8,68 @@
   :root {
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 
-    --background: 0 0% 100%;
-    --foreground: 0 0% 6%;
+    --background: 210 20% 99%;
+    --foreground: 220 25% 10%;
 
-    --card: 40 20% 96%;
-    --card-foreground: 0 0% 6%;
+    --card: 210 25% 97%;
+    --card-foreground: 220 25% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 6%;
+    --popover: 210 20% 99%;
+    --popover-foreground: 220 25% 10%;
 
-    --primary: 0 0% 6%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 20% 96%;
-    --secondary-foreground: 0 0% 6%;
+    --secondary: 210 25% 95%;
+    --secondary-foreground: 220 25% 10%;
 
-    --muted: 40 10% 94%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 210 15% 93%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 40 20% 96%;
-    --accent-foreground: 0 0% 6%;
+    --accent: 210 25% 95%;
+    --accent-foreground: 220 25% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 0 0% 6%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 217 91% 60%;
     --radius: 0.75rem;
 
-    /* Dark surface */
-    --surface-dark: 0 0% 6%;
-    --surface-dark-foreground: 0 0% 100%;
+    /* Dark surface — deep navy-black */
+    --surface-dark: 222 30% 8%;
+    --surface-dark-foreground: 210 40% 98%;
 
-    /* Agent accent colors */
-    --agent-blue-bg: 214 60% 95%;
-    --agent-blue-text: 214 78% 27%;
-    --agent-blue-border: 214 78% 37%;
+    /* Agent accent colors — brighter, more vibrant */
+    --agent-blue-bg: 214 100% 95%;
+    --agent-blue-text: 217 91% 45%;
+    --agent-blue-border: 217 91% 55%;
 
-    --agent-green-bg: 120 30% 93%;
-    --agent-green-text: 120 52% 23%;
-    --agent-green-border: 120 52% 33%;
+    --agent-green-bg: 152 70% 93%;
+    --agent-green-text: 160 84% 28%;
+    --agent-green-border: 160 84% 39%;
 
-    --agent-amber-bg: 40 80% 92%;
-    --agent-amber-text: 36 100% 24%;
-    --agent-amber-border: 36 100% 34%;
+    --agent-amber-bg: 45 100% 93%;
+    --agent-amber-text: 32 95% 38%;
+    --agent-amber-border: 32 95% 50%;
 
-    --agent-purple-bg: 244 60% 96%;
-    --agent-purple-text: 248 42% 37%;
-    --agent-purple-border: 248 42% 47%;
+    --agent-purple-bg: 270 80% 96%;
+    --agent-purple-text: 263 70% 50%;
+    --agent-purple-border: 263 70% 58%;
 
-    --agent-teal-bg: 160 45% 93%;
-    --agent-teal-text: 168 82% 17%;
-    --agent-teal-border: 168 82% 27%;
+    --agent-teal-bg: 175 60% 93%;
+    --agent-teal-text: 180 70% 28%;
+    --agent-teal-border: 180 70% 40%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 220 15% 26%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 220 15% 10%;
+    --sidebar-border: 214 20% 91%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
